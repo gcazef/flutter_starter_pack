@@ -1,16 +1,27 @@
-# flutter_starter_pack
+# Flutter Starter Pack
+Base architecture for a Flutter app to get started quickly.
 
-A new Flutter project.
+## How to use
+Simply copy the project and start adding your own classes.  
+The folders contains base classes that can be extended, and example classes that you can simply remove.
 
-## Getting Started
+Some useful commands:
+- generate model methods: `flutter pub run build_runner build`
 
-This project is a starting point for a Flutter application.
+## Description
+### Architecture
+- `config/`: global configuration values
+- `data/`: repositories to access local/remote data
+- `models/`: serializable object classes
+- `providers/`: classes holding state of model instances
+- `ui/`: everything related to user interface
 
-A few resources to get you started if this is your first Flutter project:
+### Dependencies
+- provider: keep state outside of Widgets
+- sembast: local database
+- json_serializable/json_annotation: generate code for converting models from/to json
+- logger: properly formatted logs
+- flutter_translate: easily translate your app
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## License
+Distributed under the MIT license. For more information see `LICENSE`.

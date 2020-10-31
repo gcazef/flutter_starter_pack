@@ -1,12 +1,23 @@
 # Flutter Starter Pack
 Base architecture for a Flutter app to get started quickly.
 
-## How to use
-Simply copy the project and start adding your own classes.  
-The folders contains base classes that can be extended, and example classes that you can simply remove.
+## Get started
+1. Fork the project or download the files
+2. Install all dependencies: `flutter pub get`
+3. Generate model codes: `flutter pub run build_runner build`
 
-Some useful commands:
-- generate model methods: `flutter pub run build_runner build`
+The app contains a few classes. Some of them are meant to be extended (like `IDataProvider`
+and `IDataRepository`), others like the model are just here as an example and can be removed.
+
+### Where to go from here
+There are several things you can do to customize this app, for example:
+- implement your own models, for example to match some REST API responses
+- implement the Providers and Repositories that handle models
+- save the user language in shared preferences
+- add authentication system
+- customize the theme
+- make it compatible with Flutter Web (some packages already are, some require additionnal dependencies)
+- etc...
 
 ## Description
 ### Architecture

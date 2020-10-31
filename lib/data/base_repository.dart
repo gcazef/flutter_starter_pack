@@ -39,7 +39,7 @@ abstract class IDataRepository<T> {
 
   Future<void> clear();
 
-  Future<List<T>> findAll() async {
+  Future<List<T>> findAll({ bool hasConnection = true }) async {
     if (!hasConnection) {
       return findAllLocal();
     }
@@ -49,7 +49,7 @@ abstract class IDataRepository<T> {
     return remoteData;
   }
 
-  Future<T> findOne(dynamic id) async {
+  Future<T> findOne(dynamic id, { bool hasConnection = true }) async {
     if (!hasConnection) {
       return findOneLocal(id);
     }
@@ -59,14 +59,14 @@ abstract class IDataRepository<T> {
     return remoteData;
   }
 
-  Future<void> save(List<T> data) async {
+  Future<void> save(List<T> data, { bool hasConnection = true }) async {
     if (hasConnection) {
       await saveRemote(data);
     }
     await saveLocal(data);
   }
 
-  Future<void> delete(List<T> data) async {
+  Future<void> delete(List<T> data, { bool hasConnection = true }) async {
     if (hasConnection) {
       await deleteRemote(data);
     }

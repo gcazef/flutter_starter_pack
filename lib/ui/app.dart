@@ -22,12 +22,14 @@ class App extends StatelessWidget {
         supportedLocales: delegate.supportedLocales,
         locale: delegate.currentLocale,
         theme: lightTheme,
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('MyApp'),
-          ),
-          body: Center(
-            child: Text(translate('home.hello_world')),
+        home: SafeArea(
+          child: Scaffold(
+            appBar: AppBar(
+              title: Text('MyApp'),
+            ),
+            body: Center(
+              child: Text(translate('home.hello_world')),
+            ),
           ),
         ),
       ),

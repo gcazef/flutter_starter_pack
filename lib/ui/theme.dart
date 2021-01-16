@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_pack/ui/utils/color_helpers.dart';
+import '../ui/utils/color_helpers.dart';
 
 /// Colors for the whole application
 const goldenOrange = Color(0xFFE6AA68);

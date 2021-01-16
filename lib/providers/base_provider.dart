@@ -1,4 +1,4 @@
-import 'package:flutter_starter_pack/data/base_repository.dart';
+import '../data/base_repository.dart';
 import 'package:logger/logger.dart';
 
 enum ProviderStatus { Ok, Err, Loading }
